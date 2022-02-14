@@ -1,0 +1,36 @@
+.project_count_wrappper{
+    background: $theme-black-bg;
+    .singel_project{
+        margin: 30px 0;
+        h3{
+            font-size: 42px;
+            font-family: $Roboto;
+            font-weight: $fw_bold;
+            color: #3F27BA;
+        }
+        p{
+            margin-top: 10px;
+            color: #008CD4;
+            font-family: $Roboto;
+            font-weight: $fw_bold;
+            font-size: 32px;
+        }
+    }
+    .project_button{
+        margin-top: 60px;
+        a.btn{
+            padding:18px 40px;
+            color: #fff;
+            background: #3F27BA;
+            font-weight: $fw_bold;
+            @include breakpoint(xsmall){
+                padding: 15px 17px;
+                font-size: 13px;
+            }
+            @include breakpoint(small){
+                padding: 18px 17px;
+                font-size: 14px;
+            }
+        }
+    }
+}

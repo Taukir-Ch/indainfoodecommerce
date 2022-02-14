@@ -1,0 +1,53 @@
+.comment-wrapper{
+    padding: 100px 0;
+    background: $theme-black-bg;
+    @include breakpoint(xsmall){
+        padding: 30px 0;
+    }
+    @include breakpoint(small){
+        padding: 50px 0;
+    }
+    @include breakpoint(medium){
+        padding: 60px 0;
+    }
+    @include breakpoint(xlarge){
+        padding: 100px 0;
+    }
+    @include breakpoint(xxlarge){
+        padding: 100px 0;
+    }
+    @include breakpoint(xxxlarge){
+        padding: 100px 0;
+    }
+}
+.singel-comment-wrapper{
+    margin: 30px 0;
+    .comment-left{
+        margin-right: 25px;
+    color: #e5cb51;
+    font-size: $fs_Big;
+    font-weight: $fw_bold;
+    line-height: 1;
+    
+    }
+    .comment-right{
+        h4{
+            font-size: $fs_sami_Big;
+            color: #2C2C2C;
+            font-weight: $fw_bold;
+        }
+      
+        p{
+           
+            @include breakpoint(small){
+                margin-right: 0px;
+            }
+            @include breakpoint(medium){
+                margin-right: 40px;
+            }
+            @include breakpoint(xlarge){
+                margin-right: 81px;
+            }
+        }
+    }
+}

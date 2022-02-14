@@ -1,0 +1,51 @@
+.newslatter-wrapper{
+    position: relative;
+    padding: 200px 0 300px 0;
+    margin: 100px 0;
+    h2{
+        font-weight: bold;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+    a.btn{
+        background-color: #000;
+        color: #fff;
+    }
+ .new-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45%;
+    }
+}
+.newslatter-suscribe{
+    margin: 50px 0;
+    
+.form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+  }
+  
+  /*
+  *
+  * ==========================================
+  * FOR DEMO PURPOSE
+  * ==========================================
+  *
+  */
+  
+  
+  
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+  }
+}

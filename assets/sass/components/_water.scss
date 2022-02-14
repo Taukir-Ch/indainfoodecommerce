@@ -1,0 +1,53 @@
+.winter_wrapper{
+    margin: 30px 0;
+    .win_image{
+        img{
+            border-radius: 10px;
+        }
+    }
+    .win_title{
+        margin: 15px 0
+    }
+    .win_b_left{
+        position: relative;
+        height: 90px;
+        .win_imag_01{
+            border-radius: 50px;
+            width: 60px;
+
+            @include breakpoint(medium){
+                width: 50px;
+            }
+     
+        }
+        .win_imag_02{
+            border-radius: 50px;
+            width: 60px;
+            position: absolute;
+            left: 0;
+            margin-top: -10px;
+            top: 50%;
+            @include breakpoint(medium){
+                width: 50px;
+                margin-top: -22px;
+            }
+      
+            
+        }
+    }
+    .win_b_right {
+        margin-left: 15px;
+
+        @include breakpoint(medium){
+            margin-left: 8px;
+            font-size: 13px;
+        }
+
+
+        .link_wrapper{
+            width: 100%;
+        }
+    }
+}
+
+

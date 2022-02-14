@@ -1,0 +1,45 @@
+.section-wrapper{
+    h2{
+        font-size:  $fs_Big;
+        font-weight: $fw_bold;
+        margin-bottom: 40px;
+        @include breakpoint(xsmall){
+            font-size:  25px;
+            margin-bottom: 10px;
+        }
+        @include breakpoint(small){
+            font-size:  25px;
+            margin-bottom: 15px;
+        }
+        @include breakpoint(medium){
+            font-size:  30px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.t-icon{    width: 32px;
+    margin: 0 10px 0 0;
+}
+.t-heading{
+    display: inline-block;
+    font-weight: $fw_bold;
+}
+.link_wrapper{
+    margin: 15px 0;
+    a.link_btn{
+        text-decoration: underline;
+        color:#3F27BA ;
+        font-size: 16px;
+        span {
+            display: inline-block;
+            width: 13px;
+            line-height: 1;
+        }
+    }
+
+}
+
+.p-wrapper{
+    padding: 100px 0;
+}

@@ -1,0 +1,73 @@
+// craftsmen-css-here 
+.craftsmen{
+    background: $theme-black-bg;
+    .craftsmen_menu {
+        margin: 30px 0;
+    }
+    .craftsmen-btn{
+        margin-top: 40px;
+    }
+}
+
+// craftsmen-curosel-css-here
+.right_craftsmen_wrapper{
+    background: $theme-blue-bg;
+    .section-wrapper{
+        h2{
+            color: #fff;
+        }
+    }
+    .craftsmen-singel-carosel{
+        margin: 30px 0;
+        background: #fff;
+        padding: 18px;
+        border-radius: 18px;
+        height: 350px;
+        .cra_cursel_top{
+            h4{
+                font-size: $fs_small;
+                font-weight: $fw_bold;
+                margin-top: 5px;
+            }
+            
+            .car_cusel_img {
+                width: 48px;
+                margin-right: 15px;
+              
+                img{
+                    border-radius: 10px;
+                }
+            }
+         }
+         .car_cursel_icon{
+            fill: #128850;
+            margin-top: 13px;
+         }
+         .car_cursel_review{
+             .car_cure_author{
+
+             }
+             .car_cure_client{
+                p{
+                    padding: 8px 0;
+                    color: #2C2C2C;
+                }
+             }
+         }
+    }
+}
+
+.craftsmen_right_bottom{
+    margin-top: 20px;
+    .craftsmen_right_bottom_icon{
+        fill: #128850;
+        display: inline-block;
+        margin-right: 18px;
+    }
+    h4{
+        display: inline-block;
+        font-size: 17px;
+        color: #fff;
+        margin-top: 13px;
+    }
+}
