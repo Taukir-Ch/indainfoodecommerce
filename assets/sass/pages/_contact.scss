@@ -57,3 +57,34 @@
     }
     margin-bottom: 60px;
 }
+
+
+
+
+// bannar-area ///@at-root
+.bannar_wapper{
+    position: relative;
+    &::before{
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 168px;
+    background: linear-gradient(180deg,#000 -80%,hsla(0,0%,100%,0) 80%);
+    }
+}
+// singel_constraction_wrapper 
+.construction_tv_show{
+    background: $theme-black-bg$theme-black-bg;
+}
+.singel_constraction{
+    p{
+        margin-top: 5px;
+    }
+}
+
+.singel_tv_picutre{
+ margin: 0 20px;
+}

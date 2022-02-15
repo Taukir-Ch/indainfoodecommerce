@@ -552,28 +552,13 @@ img {
 .header-content-wrapper {
   position: relative;
 }
-.header-content-wrapper::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.25) -webkit-gradient(linear, left top, left bottom, color-stop(3.62%, rgba(0, 0, 0, 0.7)), color-stop(17.92%, rgba(0, 0, 0, 0)));
-  background: rgba(0, 0, 0, 0.25) -o-linear-gradient(top, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
-  background: rgba(0, 0, 0, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.7) 3.62%, rgba(0, 0, 0, 0) 17.92%);
-  z-index: -1;
-  mix-blend-mode: multiply;
-}
 .header-content-wrapper .Header_menu_warpper {
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   padding: 18px;
+  z-index: 100;
 }
 .header-content-wrapper .menu ul li {
   margin: 0 10px;
@@ -949,6 +934,34 @@ ul.mobile_menu li a {
 .google_loging_wrapper a.btn {
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.bannar_wapper {
+  position: relative;
+}
+.bannar_wapper::before {
+  pointer-events: none;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 168px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-80%, #000), color-stop(80%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, #000 -80%, rgba(255, 255, 255, 0) 80%);
+  background: linear-gradient(180deg, #000 -80%, rgba(255, 255, 255, 0) 80%);
+}
+
+.construction_tv_show {
+  background: #f9f8f6 #f9f8f6;
+}
+
+.singel_constraction p {
+  margin-top: 5px;
+}
+
+.singel_tv_picutre {
+  margin: 0 20px;
 }
 
 .devider_bottom {
