@@ -905,6 +905,10 @@ ul.mobile_menu li a {
   fill: #000;
 }
 
+.overlay_bannar {
+  margin-top: -284px;
+}
+
 .contanct-wrapper .section-wrapper h2 {
   font-size: 42px;
 }
@@ -953,7 +957,7 @@ ul.mobile_menu li a {
 }
 
 .construction_tv_show {
-  background: #f9f8f6 #f9f8f6;
+  background: #f9f8f6;
 }
 
 .singel_constraction p {
@@ -962,6 +966,86 @@ ul.mobile_menu li a {
 
 .singel_tv_picutre {
   margin: 0 20px;
+}
+
+.ins_baner_wapper {
+  background: #f9f8f6;
+}
+
+.ins_bannar_wrapper {
+  background: #f9f8f6;
+  padding: 35px;
+  /*position should be relative and z-index greater than one*/
+}
+.ins_bannar_wrapper .container form {
+  background-color: white;
+  color: #888888;
+  text-align: left;
+  padding-top: 20px;
+}
+.ins_bannar_wrapper .container label {
+  display: none;
+}
+.ins_bannar_wrapper .container input,
+.ins_bannar_wrapper .container textarea {
+  /* to create space for placing icon*/
+  padding-left: 42px;
+  border-color: transparent;
+  background-color: #fff;
+  border-radius: 0px;
+}
+.ins_bannar_wrapper .container .btn-default {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 20px 36px;
+  background-color: #049DDF;
+  border-radius: 0px;
+  border: 0px;
+  color: #F1F1F1;
+  width: 100%;
+  border-radius: 28px;
+}
+.ins_bannar_wrapper .container .btn-default:hover,
+.ins_bannar_wrapper .container .btn-default:focus {
+  background-color: #049DDF;
+  color: #F1F1F1;
+  border-color: transparent;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+.ins_bannar_wrapper .container .icon {
+  position: relative;
+  float: left;
+  margin-left: 13px;
+  margin-top: -31.5px;
+  z-index: 2;
+  color: #1e90ff;
+}
+.ins_bannar_wrapper .container .icon-textarea {
+  float: left;
+  margin-left: 8px;
+  margin-top: -104px;
+  position: relative;
+  z-index: 2;
+  color: #222222;
+}
+.ins_bannar_wrapper .form-group input {
+  border: 1px solid #d9d7d5;
+}
+.ins_bannar_wrapper .form-control {
+  padding: 9.5px 18px;
+}
+
+.insc_baner_wapper {
+  padding: 50px;
+  background: #f9f8f6;
+}
+.insc_baner_wapper h2 {
+  font-size: 52px;
+  margin-bottom: 30px;
+}
+.insc_baner_wapper p {
+  font-size: 17px;
+  margin: 8px 0;
 }
 
 .devider_bottom {

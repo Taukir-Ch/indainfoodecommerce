@@ -1,60 +1,77 @@
-.contact{
-//    header-css 
+.contact {
+    //    header-css 
     height: 100px;
-    .menu{
-        ul{
-            li{
-                a{
+
+    .menu {
+        ul {
+            li {
+                a {
                     color: #000;
                 }
             }
         }
     }
-    a.hamburger-nav span{
+
+    a.hamburger-nav span {
         color: #000;
     }
-    a.hamburger-nav{
+
+    a.hamburger-nav {
         border: 1px solid #000;
     }
+
     a.hamburger-nav svg {
         fill: #000;
     }
 
-   
+
+}
+.overlay_bannar {
+    margin-top: -284px;
 }
 
-.contanct-wrapper{
-     // body_css 
-     .section-wrapper{
-        h2{
+
+
+.contanct-wrapper {
+
+    // body_css 
+    .section-wrapper {
+        h2 {
             font-size: 42px;
         }
     }
-    .form-group{
+
+    .form-group {
         margin: 30px 0;
-        label{
+
+        label {
             font-size: 18px;
-            span{
+
+            span {
                 color: red;
             }
         }
-       
+
     }
-    p{
+
+    p {
         margin-bottom: 20px;
     }
-    .btn.loign_a_btn{
+
+    .btn.loign_a_btn {
         background: #330691;
         color: #fff;
         box-shadow: none;
         margin-bottom: 50px;
     }
 }
-.google_loging_wrapper{
-    a.btn{
+
+.google_loging_wrapper {
+    a.btn {
         margin-bottom: 20px;
         border-radius: 10px;
     }
+
     margin-bottom: 60px;
 }
 
@@ -62,29 +79,131 @@
 
 
 // bannar-area ///@at-root
-.bannar_wapper{
+.bannar_wapper {
     position: relative;
-    &::before{
-    pointer-events: none;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    height: 168px;
-    background: linear-gradient(180deg,#000 -80%,hsla(0,0%,100%,0) 80%);
+
+    &::before {
+        pointer-events: none;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 168px;
+        background: linear-gradient(180deg, #000 -80%, hsla(0, 0%, 100%, 0) 80%);
     }
 }
+
 // singel_constraction_wrapper 
-.construction_tv_show{
-    background: $theme-black-bg$theme-black-bg;
+.construction_tv_show {
+    background: $theme-black-bg;
 }
-.singel_constraction{
-    p{
+
+.singel_constraction {
+    p {
         margin-top: 5px;
     }
 }
 
-.singel_tv_picutre{
- margin: 0 20px;
+.singel_tv_picutre {
+    margin: 0 20px;
+}
+
+.ins_baner_wapper{
+    background: #f9f8f6;
+}
+
+
+.ins_bannar_wrapper {
+    background: #f9f8f6;
+    padding: 35px;
+    .container form {
+        background-color: white;
+        color: #888888;
+        text-align: left;
+        padding-top: 20px;
+    }
+    
+    .container label {
+        display: none;
+    }
+
+    .container input,
+    .container textarea {
+        /* to create space for placing icon*/
+        padding-left: 42px;
+        border-color: transparent;
+        background-color: #fff;
+        border-radius: 0px;
+    }
+
+    .container .btn-default {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        padding: 20px 36px;
+        background-color: #049DDF;
+        border-radius: 0px;
+        border: 0px;
+        color: #F1F1F1;
+        width: 100%;
+        border-radius: 28px;
+    }
+
+    .container .btn-default:hover,
+    .container .btn-default:focus {
+        background-color: #049DDF;
+       
+        color: #F1F1F1;
+        border-color: transparent;
+        outline: 0px auto -webkit-focus-ring-color;
+    }
+
+    /*position should be relative and z-index greater than one*/
+    .container .icon {
+        position: relative;
+        float: left;
+        margin-left: 13px;
+        margin-top: -31.5px;
+        z-index: 2;
+        color: #1e90ff;
+    }
+
+    .container .icon-textarea {
+        float: left;
+        margin-left: 8px;
+        margin-top: -104px;
+        position: relative;
+        z-index: 2;
+        color: #222222;
+    }
+    .form-group{
+        input{
+            border:  1px solid #d9d7d5;
+        }
+    }
+    .form-control {
+        padding: 9.5px 18px;
+    }
+
+
+
+
+
+
+
+   
+}
+
+
+.insc_baner_wapper{
+    padding: 50px;
+    background: #f9f8f6;
+    h2{
+        font-size: 52px;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 17px;
+        margin: 8px 0;
+    }
 }
