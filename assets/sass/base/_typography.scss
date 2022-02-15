@@ -43,3 +43,18 @@
 .p-wrapper{
     padding: 100px 0;
 }
+.min_hieght{
+    min-height: 650px;
+    position: relative;
+
+    &::before {
+        pointer-events: none;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 168px;
+        background: linear-gradient(180deg, #000 -80%, hsla(0, 0%, 100%, 0) 80%);
+    }
+}

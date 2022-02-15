@@ -80,18 +80,7 @@
 
 // bannar-area ///@at-root
 .bannar_wapper {
-    position: relative;
 
-    &::before {
-        pointer-events: none;
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        height: 168px;
-        background: linear-gradient(180deg, #000 -80%, hsla(0, 0%, 100%, 0) 80%);
-    }
 }
 
 // singel_constraction_wrapper 
@@ -100,13 +89,14 @@
 }
 
 .singel_constraction {
+    margin: 40px 0;
     p {
         margin-top: 5px;
     }
 }
 
 .singel_tv_picutre {
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
 .ins_baner_wapper{
@@ -118,7 +108,7 @@
     background: #f9f8f6;
     padding: 35px;
     .container form {
-        background-color: white;
+        
         color: #888888;
         text-align: left;
         padding-top: 20px;
@@ -133,7 +123,7 @@
         /* to create space for placing icon*/
         padding-left: 42px;
         border-color: transparent;
-        background-color: #fff;
+        
         border-radius: 0px;
     }
 
@@ -202,8 +192,14 @@
         font-size: 52px;
         margin-bottom: 30px;
     }
+    span.icon {
+        font-size: 27px;
+        color: #1e90ff;
+        margin-right: 10px;
+    }
     p{
         font-size: 17px;
         margin: 8px 0;
     }
 }
+

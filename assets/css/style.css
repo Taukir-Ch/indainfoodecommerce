@@ -330,6 +330,23 @@ img {
   padding: 100px 0;
 }
 
+.min_hieght {
+  min-height: 650px;
+  position: relative;
+}
+.min_hieght::before {
+  pointer-events: none;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 168px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-80%, #000), color-stop(80%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, #000 -80%, rgba(255, 255, 255, 0) 80%);
+  background: linear-gradient(180deg, #000 -80%, rgba(255, 255, 255, 0) 80%);
+}
+
 .comment-wrapper {
   padding: 100px 0;
   background: #f9f8f6;
@@ -574,7 +591,6 @@ img {
 }
 
 .bannar_wapper {
-  min-height: 640px;
   background-size: cover;
 }
 .bannar_wapper .signel_bannar h1 {
@@ -940,32 +956,19 @@ ul.mobile_menu li a {
   border-radius: 10px;
 }
 
-.bannar_wapper {
-  position: relative;
-}
-.bannar_wapper::before {
-  pointer-events: none;
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  height: 168px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-80%, #000), color-stop(80%, rgba(255, 255, 255, 0)));
-  background: -o-linear-gradient(top, #000 -80%, rgba(255, 255, 255, 0) 80%);
-  background: linear-gradient(180deg, #000 -80%, rgba(255, 255, 255, 0) 80%);
-}
-
 .construction_tv_show {
   background: #f9f8f6;
 }
 
+.singel_constraction {
+  margin: 40px 0;
+}
 .singel_constraction p {
   margin-top: 5px;
 }
 
 .singel_tv_picutre {
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
 .ins_baner_wapper {
@@ -978,7 +981,6 @@ ul.mobile_menu li a {
   /*position should be relative and z-index greater than one*/
 }
 .ins_bannar_wrapper .container form {
-  background-color: white;
   color: #888888;
   text-align: left;
   padding-top: 20px;
@@ -991,7 +993,6 @@ ul.mobile_menu li a {
   /* to create space for placing icon*/
   padding-left: 42px;
   border-color: transparent;
-  background-color: #fff;
   border-radius: 0px;
 }
 .ins_bannar_wrapper .container .btn-default {
@@ -1043,9 +1044,52 @@ ul.mobile_menu li a {
   font-size: 52px;
   margin-bottom: 30px;
 }
+.insc_baner_wapper span.icon {
+  font-size: 27px;
+  color: #1e90ff;
+  margin-right: 10px;
+}
 .insc_baner_wapper p {
   font-size: 17px;
   margin: 8px 0;
+}
+
+.publish {
+  min-height: 650px;
+}
+.publish .signel_bannar h1 {
+  margin: 60px 0;
+  color: #000;
+}
+.publish .signel_bannar .bannar_from_group h4 {
+  margin-bottom: 60px;
+  color: #000;
+}
+.Header_menu_warpper.publier .menu ul li a {
+  color: #000;
+}
+.Header_menu_warpper.publier a.hamburger-nav span {
+  color: #000;
+}
+.Header_menu_warpper.publier a.hamburger-nav {
+  border: 1px solid #000;
+}
+.Header_menu_warpper.publier a.hamburger-nav svg {
+  fill: #000;
+}
+
+.puliser_cta .singel_puliser {
+  margin: 25px 0;
+  border: 0.063rem solid #D9D7D5;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.puliser_cta .singel_puliser .svg_icon {
+  width: 30px;
+}
+.puliser_cta .singel_puliser h6 {
+  font-size: 16px;
+  margin-top: 8px;
 }
 
 .devider_bottom {
