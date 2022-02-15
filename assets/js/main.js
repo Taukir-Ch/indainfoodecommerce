@@ -51,8 +51,44 @@ We may release future updates so it will overwrite this file. it's better and sa
       });
   
   
-
   
+        var $signupForm = $( '#SignupForm' );
+        
+        $signupForm.validate({
+            errorElement: 'em',
+            submitHandler: function (form) { 
+                alert('submitted');
+                form.submit();
+            }
+        });
+        
+        $signupForm.formToWizard({
+            submitButton: 'SaveAccount',
+            nextBtnClass: 'btn btn-primary next',
+            prevBtnClass: 'btn btn-default prev',
+            buttonTag:    'button',
+            validateBeforeNext: function(form, step) {
+                var stepIsValid = true;
+                var validator = form.validate();
+                $(':input', step).each( function(index) {
+                    var xy = validator.element(this);
+                    stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                });
+                return stepIsValid;
+            },
+            progress: function (i, count) {
+                $('#progress-complete').width(''+(i/count*100)+'%');
+            }
+        });
+    
+  
+        function myMap() {
+          var mapProp= {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+          };
+          var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          }
   
   
   

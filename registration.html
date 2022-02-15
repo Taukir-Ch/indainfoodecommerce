@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>tfQuickstart || Quickstart for Themeforest HTML Template</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!-- Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Work+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- ======= FontAwesome ======= -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- ======= Main Stylesheet ======= -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- ======= Custom Stylesheet ======= -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <style>
+        .wrap {
+            max-width: 980px;
+            margin: 10px auto 0;
+        }
+
+        #steps {
+            margin: 80px 0 0 0
+        }
+
+        .commands {
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .prev {
+            float: left
+        }
+
+        .next,
+        .submit {
+            float: right
+        }
+
+        .error {
+            color: #b33;
+        }
+
+        #progress {
+            position: relative;
+            height: 5px;
+            background-color: #eee;
+            margin-bottom: 20px;
+        }
+
+        #progress-complete {
+            border: 0;
+            position: absolute;
+            height: 5px;
+            min-width: 10px;
+            background-color: #337ab7;
+            transition: width .2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="gray_bg">
+    <header>
+        <div class="f_header-content-wrapper gray_bg">
+            <div class="Header_menu_warpper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="logo">
+                                <svg aria-label="Travaux.com" data-testid="travauxLogo"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 32" height="1.5rem"
+                                    class="css-1q3dvml ev1au544" data-light="false">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M34.2 6v3.5h5.7v15.1H44v-15h5.7V6H34.2Zm15.5 18.6V11.2h3.7V13c1-1.2 2.8-2.2 4.5-2.2v3.5a5 5 0 0 0-1 0c-1.2 0-2.9.6-3.5 1.4v9h-3.7Zm19.7-4.3v-4.8c-.6-.8-2-1.5-3.2-1.5-2.2 0-3.6 1.6-3.6 3.9s1.4 3.9 3.6 3.9a4 4 0 0 0 3.2-1.5Zm0 4.3V23a5.5 5.5 0 0 1-4.4 2c-3.5 0-6.3-2.5-6.3-7 0-4.4 2.7-7 6.3-7 1.7 0 3.2.6 4.4 2v-1.7H73v13.4h-3.7Zm10.8 0-5.7-13.4h4l3.6 9.3 3.8-9.3h4l-5.7 13.4h-4Zm20.1-4.3v-4.8c-.6-.8-2-1.5-3.2-1.5-2 0-3.5 1.6-3.5 3.9s1.4 3.9 3.5 3.9c1.3 0 2.6-.6 3.2-1.5Zm0 4.3V23a5.5 5.5 0 0 1-4.3 2c-3.6 0-6.3-2.5-6.3-7 0-4.4 2.7-7 6.3-7 1.6 0 3.2.6 4.3 2v-1.7h3.8v13.4h-3.8Zm15.8 0V23c-1 1-2.6 2-5 2-3 0-4.5-1.6-4.5-4.2v-9.5h3.7v8.1c0 1.9 1 2.5 2.6 2.5 1.4 0 2.6-.7 3.2-1.5v-9.1h3.7v13.4h-3.7Zm15.6 0-3.2-4.5-3.3 4.5h-4.1l5-6.9-4.7-6.5h4.1l3 4.1 2.9-4.1h4.1l-4.7 6.5 5 7h-4.1Zm6.6-1c0-.7.7-1.2 1.4-1.2s1.2.5 1.2 1.2c0 .6-.5 1.2-1.2 1.2s-1.4-.6-1.4-1.2Zm3.8-5.8c0-3.9 2.7-7 6.9-7a6 6 0 0 1 5 2.3l-1.1.9a4.5 4.5 0 0 0-3.8-1.9c-3.3 0-5.3 2.5-5.3 5.7 0 3.3 2 5.8 5.3 5.8 1.5 0 2.8-.6 3.8-2l1 1a5.9 5.9 0 0 1-5 2.3c-4 0-6.8-3.2-6.8-7Zm25.2 0c0-3-1.9-5.7-5.2-5.7-3.3 0-5.1 2.8-5.1 5.7 0 3 1.8 5.8 5.1 5.8s5.2-2.8 5.2-5.8Zm-12 0c0-3.9 2.7-7 6.8-7 4.2 0 6.8 3.1 6.8 7 0 4-2.6 7-6.8 7-4.1 0-6.7-3-6.7-7Zm33.1 6.7v-9.3c0-1.9-.8-3-2.8-3-1.5 0-3.3 1-4 2.2v10.1H180v-9.3c0-1.9-.8-3-2.8-3-1.5 0-3.2 1-4 2.2v10.1h-1.6V11.2h1.6v2c.5-.9 2.5-2.4 4.5-2.4 2.2 0 3.4 1.2 3.7 2.5a6 6 0 0 1 4.7-2.5c2.6 0 3.8 1.4 3.8 4.1v9.6h-1.5Z"
+                                        fill="#000"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1 25.1h24c.5 0 1-.4 1.1-1V6.4c-.1-.5-.6-.7-1.2-1L13.8.2c-.6-.3-.9-.3-1.5 0L1 5.3c-.6.3-1 .5-1 1v17.9c0 .5.5 1 1 1Z"
+                                        fill="#E73B1D"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.9 21.3v-1.9h1.7V9.6H7.9v2.2H5.8v-4h14.5v4h-2V9.6h-3.8v9.8H16v1.9H10Z"
+                                        fill="#fff"></path>
+                                </svg>
+                            </div>
+                            <div id='progress'>
+                                <div id='progress-complete'></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </header>
+    <main>
+        <div class="f_wrapper_cover ">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-md-8 offset-md-2">
+
+
+
+                        <form id="SignupForm" action="" method="post">
+                            <fieldset>
+                                <h2>Choose the projects that interest you</h2>
+                              
+                                <p>       Free and non-binding registration!</p>
+                                <h2>
+    
+                                    <span>
+                                        Pay only if the individual agrees to be put in contact with you.
+                                    </span>
+                                </h2>
+                                <div class="singel-comment-wrapper d-flex">
+                                    <div class="comment-left">
+                                        1
+                                    </div>
+                                    <div class="comment-right">
+                                        <h4>Publish your project</h4>
+                                        <p>Describe your project in a few clicks and select yourself the craftsmen with whom
+                                            you wish to be put in contact.</p>
+                                    </div>
+    
+                                </div>
+                                <div class="singel-comment-wrapper d-flex">
+                                    <div class="comment-left">
+                                        1
+                                    </div>
+                                    <div class="comment-right">
+                                        <h4>Publish your project</h4>
+                                        <p>Describe your project in a few clicks and select yourself the craftsmen with whom
+                                            you wish to be put in contact.</p>
+                                    </div>
+    
+                                </div>
+                                <div class="singel-comment-wrapper d-flex">
+                                    <div class="comment-left">
+                                        1
+                                    </div>
+                                    <div class="comment-right">
+                                        <h4>Publish your project</h4>
+                                        <p>Describe your project in a few clicks and select yourself the craftsmen with whom
+                                            you wish to be put in contact.</p>
+                                    </div>
+    
+                                </div>
+                            </fieldset>
+
+
+
+
+
+
+
+                        <fieldset>
+                            <div class="section-wrapper">
+                             <h2>To get started, tell us about your job </h2>
+                            </div>
+                                 
+                                 <p>This information will allow us to target the most interesting projects for you.
+                                 </p>
+                             <div class="form-group">
+     
+                                 <label for="main_job" class="control-label">main job <span>*</span></label>
+                               
+                                     <select id="main_job" class="form-control dropdown">
+                                         <option value="Electrician">Electrician</option>
+                                         <option value="Sealer - Insulation company">Sealer - Insulation company</option>
+                                         <option value="worker">Ironworker - Metalworker - Zinc worker</option>
+                                         <option value="Refrigerator">Refrigerator</option>
+     
+                                     </select>
+                         
+     
+                                 <label for="Zip" class="control-label">ZIP</label>
+                                 <div class=""><input id="Zip" type="text" class="form-control" /></div>
+     
+                                 <label for="email">Email</label>
+                                 <input id="email" name="email" type="email" class="form-control" required />
+                                 
+                             </div>
+                             
+                         </fieldset>
+ 
+                         <fieldset>
+                            <div class="section-wrapper">
+                             <h2>We have <span>903 construction projects</span> that suit you </h2>
+                            </div>
+                                 
+                                 <p>Create your professional account to access it
+                                 </p>
+                           
+     
+                                 <div class="form-group">
+                                     <label for="Name">Name <span>*</span></label>
+                                     <input id="Name" name="name" type="text" class="form-control" required />
+                                 </div>
+     
+                                 <div class="form-group">
+                                     <label for="Nam_2e">Last Name <span>*</span></label>
+                                     <input id="Nam_2e" name="name" type="text" class="form-control" required />
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="Nam_2e">Phone <span>*</span></label>
+                                     <input id="Nam_2e" name="name" type="text" class="form-control" required />
+                                 </div>
+                                     <div class="form-group">
+                                     <label for="Email2">Email</label>
+                                     <input id="Email2" name="email" type="email" class="form-control" required />
+                                     </div>
+                                     <div class="form-group">
+                                     <label for="Password">Password</label>
+                                     <input id="Password" type="password" class="form-control" />
+                                     </div>
+                                 
+                      
+                             
+                         </fieldset>
+     
+                         <fieldset>
+                            <div class="section-wrapper">
+                             <h2>What is your business?</h2>
+                            </div>
+                                 
+                                 <p>
+                                 
+                                 Only building professionals with a valid SIRET can interact with owners.
+                             </p>
+                
+     
+                                 <div class="form-group">
+                                     <label for="Nam_2e_0">Name of your company or SIRET <span>*</span></label>
+                                     <input id="Nam_2e_0" name="name" type="text" class="form-control" required />
+                                 </div>
+                               
+                                 
+                      
+                             
+                         </fieldset>
+     
+                         <fieldset>
+                            <div class="section-wrapper">
+                             <h2>No result</h2>
+                            </div>
+                                 
+                                 <p>Your business was not found. Please fill in the fields to fill in your company information. We will verify this information.
+                             </p>
+                
+                             <div class="form-group">
+                                 <label for="NumberSiret">Number Siret<span>*</span></label>
+                                 <input id="NumberSiret" name="NumberSiret" type="number"  min="14" max="14"class="form-control" required />
+                             </div>
+ 
+                                 <div class="form-group">
+                                     <label for="Company_Name">Company Name<span>*</span></label>
+                                     <input id="Company_Name" name="Company_Name" type="text" class="form-control" required />
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="Address">Address<span>*</span></label>
+                                     <input id="Address" name="Address" type="text" class="form-control" required />
+                                 </div>
+                               
+                                 
+                      
+                             
+                         </fieldset>
+     
+                        
+     
+ 
+                        
+                         <fieldset>
+                             <h2> Happy to see you again</h2>
+                            <p>                  Looks like you already have an account. Please log in to view construction projects.
+                             <br>
+                             If you don't know your password, you can reset it in the next step.</p>
+           
+                         </fieldset>
+ 
+                            <fieldset>
+                                <h2> What are your activities ?</h2>
+                                <div class="f_icon_box d-flex align-items-center">
+                                    <div class="f_icon_svg">
+                                        <div class="bulp_icon">
+                                            <img src="./assets/image/form_icon/light_icon2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <h5>You will receive the projects corresponding to the selected activities.</h5>
+                                </div>
+                               
+                                    <div class="small_work_wrapper f_work_checkbox"> 
+                                        <div class="f_work_title">
+                                            <h3>Handyman - Small jobs</h3>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Clearing
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Pruning">
+                                            <label class="form-check-label" for="Pruning">
+                                                Pruning
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Clearing
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Pruning">
+                                            <label class="form-check-label" for="Pruning">
+                                                Pruning
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <div class="big_work_wrapper f_work_checkbox">
+                                        <div class="f_work_title">
+                                            <h3>Handyman - Small jobs</h3>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Clearing
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Pruning">
+                                            <label class="form-check-label" for="Pruning">
+                                                Pruning
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Clearing
+                                            </label>
+                                          </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Pruning">
+                                            <label class="form-check-label" for="Pruning">
+                                                Pruning
+                                            </label>
+                                          </div>
+                                    </div>
+                                    <hr>
+                                    <p>You have selected 13 activities. You can change your preferences at any time.
+
+                                    </p>
+                            </fieldset>
+
+
+
+
+
+
+                            <button id="SaveAccount" type="submit" class="btn btn-primary submit">To be continue</button>
+
+                        </form>
+                        <div class="footer">
+                            <ul>
+                                <li>
+
+                                    <a href="#"><span>Terms</span> </a> and Conditions and <a
+                                        href="#"><span>Terms</span> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ======= jQuery Library ======= -->
+    <script src=" assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+    
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+    <!-- ======= Main JS ======= -->
+    <script src="assets/js/jquery.formtowizard.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- ======= Custom JS ======= -->
+    <script src="assets/js/custom.js"></script>
+</body>
